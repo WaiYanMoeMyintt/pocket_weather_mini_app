@@ -1,6 +1,6 @@
 import "./globals.css";
-import { Nunito } from "next/font/google";
-const inter = Nunito({ subsets: ["latin"] });
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 import Weather from "./context/Weather";
 
 export const metadata = {
