@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useContext, createContext } from "react";
+import CurrentWeather from "../components/CurrentWeather";
 import Nav from "../components/Nav";
-
 export const WeatherAPI = createContext();
 
 const Weather = () => {
