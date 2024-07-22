@@ -11,7 +11,7 @@ const Weather = () => {
   useEffect(() => {
     const getCurrentLocation = async () => {
       try {
-        const api = "http://localhost:3000/api/location";
+        const api = "/api/location";
         const fetchData = await fetch(api);
         const resData = await fetchData.json();
         const weather = resData.map(items => {
