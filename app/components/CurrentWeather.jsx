@@ -15,17 +15,19 @@ import {
 const CurrentWeather = () => {
   const weather = useContext(WeatherAPI);
   const [current, setCurrent] = useState([]);
+
   const [weatherIcon, setWeatherIcon] = useState("");
-  console.log(current);
+  // console.log(current);
   const [loading, setLoading] = useState(false);
   const currentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${weather.lat}&lon=${weather.lon}&appid=40957144dd09f20d66c6d541c84a3adf`;
   //getCurrentWeather API
   useEffect(() => {
     const currentWeatherApp = async () => {
-      if (weather) {
+      if (weather.lat && weather.lon) {
         try {
           const getData = await fetch(currentWeatherAPI);
           const resData = await getData.json();
+          console.log(resData);
           setCurrent(resData);
           setLoading(true);
         } catch (err) {
