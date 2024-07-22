@@ -6,10 +6,8 @@ import Nav from "../components/Nav";
 export const WeatherAPI = createContext();
 
 const Weather = () => {
-  const [location, setLocation] = useState();
   const [lat, setLat] = useState();
   const [lon , setLong] = useState(); 
-  // Get current location
   useEffect(() => {
     const getCurrentLocation = async () => {
       try {
@@ -19,7 +17,6 @@ const Weather = () => {
         const weather = resData.map(items => {
           setLat(items?.lat);
           setLong(items?.lon);
-          setLocation(items);
         });
         return weather;
      
