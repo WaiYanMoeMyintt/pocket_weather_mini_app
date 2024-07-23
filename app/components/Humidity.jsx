@@ -4,7 +4,6 @@ import { WeatherAPI } from '../context/Weather';
 const Humidity = () => {
   const {weather} = useContext(WeatherAPI);
   const {current, location} = weather;
-  console.log(current); 
 
   if(!current){
     return <div>Loading...</div>
