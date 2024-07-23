@@ -18,7 +18,7 @@ const CurrentWeather = () => {
   const [weatherIcon, setWeatherIcon] = useState("");
   const [loading, setLoading] = useState(false);
   const currentWeatherAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${weather.lat}&lon=${weather.lon}&appid=40957144dd09f20d66c6d541c84a3adf`;
-  //getCurrentWeather API
+
   useEffect(() => {
     const currentWeatherApp = async () => {
       if (weather.lat && weather.lon) {
@@ -47,6 +47,8 @@ const CurrentWeather = () => {
 
   const [day, setCurrentDay] = useState("");
   const [date, setCurrentDate] = useState("");
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       const localMoment = moment().utcOffset(current.timezone / 60);
@@ -106,11 +108,11 @@ const CurrentWeather = () => {
           <div className="weather_location mt-4">
             <div className="time_zone flex my-2.5 gap-2 items-center">
               <Image src = "/calendar.svg" alt = "calendar" width={20} height={20} />
-              <p className="text-sm">{day}, {date}</p>
+              <p className="text-sm text-slate-600">{day}, {date}</p>
             </div>
             <div className="current_map flex gap-2 items-center my-2.5">
             <Image src = "/map.svg" alt = "calendar" width={20} height={20} />
-              <p className="text-sm">
+              <p className="text-sm text-slate-600">
                 {current?.name}, {current?.sys?.country}
               </p>
             </div>

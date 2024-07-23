@@ -1,7 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
 import CurrentWeather from "./CurrentWeather";
+import { WeatherAPI } from "../context/Weather";
+
 const Nav = () => {
+   const {search, setSearch} = useContext(WeatherAPI);
+   const inputData  = useRef(null);
+
+  const handleSubmit = (event)=>{
+       event.preventDefault();
+       setSearch(inputData.current.value);
+  }
+  // console.log(search);
   return (
     <>
       <nav className="flex items-center justify-between px-2 gap-4">
@@ -16,14 +26,14 @@ const Nav = () => {
         </div>
 
         <form
-          onSubmit={(event) => event.preventDefault()}
+          onSubmit={handleSubmit}
           className="search flex md:w-full"
         >
           <input
             type="text"
             className="block w-72 rounded-2xl border-none md:w-full"
             placeholder="Search location or places"
-            onChange={(event) => console.log(event.target.value)}
+            ref={inputData}
           />
           <Image
             className="cursor-pointer"

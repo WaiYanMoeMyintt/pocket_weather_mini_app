@@ -21,7 +21,7 @@ body {
   font-size: .9rem;
   background-color: #fff;
   height: 2.5rem;
-  padding-left: .5rem;
+  padding-left: 1rem;
 }
 .search input:active, .search input:focus {
   border: none;
