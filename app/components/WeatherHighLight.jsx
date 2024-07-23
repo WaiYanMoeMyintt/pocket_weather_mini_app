@@ -3,8 +3,8 @@ import Pollution from "./Pollution";
 import SunCondition from "./SunCondition";
 import Wind from "./Wind";
 import Humidity from "./Humidity";
-import Pressure from "./Pressure";
-import CurrentTemeperature from "./CurrentTemperature";
+import Preci from "./Preci";
+import UV from "./UV";
 import Temperature from "./Temperature";
 const WeatherHighLight = () => {
   return (
@@ -14,9 +14,9 @@ const WeatherHighLight = () => {
       <SunCondition />
       <div className="weather_highlights py-1 px-1 w-full">
         <Wind />
+        <UV />
         <Humidity />
-        <Pressure />
-        <CurrentTemeperature />
+        <Preci />
         <Temperature />
       </div>
     </div>
