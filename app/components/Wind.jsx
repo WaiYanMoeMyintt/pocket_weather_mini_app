@@ -8,7 +8,6 @@ const Wind = () => {
   if(!current.air_quality){
     return <div>Loading.....</div>
  }
-  console.log(current);
   return (
     <div className="pollution  py-4 px-2 rounded-xl mt-2.5">
       <div className="status mb-4">
