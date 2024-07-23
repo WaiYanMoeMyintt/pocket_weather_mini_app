@@ -16,7 +16,7 @@ const Humidity = () => {
          </div>
          <div className  = "flex justify-between items-center gap-4">
             <Droplets size = {35}/>
-            <p className = "text-slate-600 text-base">{current?.humidity}hPa</p>
+            <p className = "text-slate-600 text-base">{current?.humidity} hPa</p>
          </div>
     </div>
   )
