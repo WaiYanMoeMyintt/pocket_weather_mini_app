@@ -4,11 +4,6 @@ import { Wind } from "lucide-react";
 const Pollution = () => {
     const {weather} = useContext(WeatherAPI);
     const {current, location} = weather;
-    console.log(current,location);
-  // const {pollution} = useState(WeatherAPI);
-  // console.log(pollution);
-
-  console.log(current.air_quality);
 
   if(!current.air_quality){
      return <div>Loading.....</div>
