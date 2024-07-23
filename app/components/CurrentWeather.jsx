@@ -22,7 +22,6 @@ const CurrentWeather = () => {
   }
 
   const { current, location } = weather;
-  console.log(location);
   const checkTime = current?.last_updated.slice(11,13);
 
   return (
