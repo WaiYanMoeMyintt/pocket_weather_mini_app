@@ -11,7 +11,6 @@ const Nav = () => {
        event.preventDefault();
        setSearch(inputData.current.value);
   }
-  // console.log(search);
   return (
     <>
       <nav className="flex items-center justify-between px-2 gap-4">

@@ -6,21 +6,17 @@ import Nav from "../components/Nav";
 export const WeatherAPI = createContext();
 
 const Weather = () => {
-    const [lat, setLat] = useState();
-    const [lon, setLong] = useState();
+    const [weather, setWeather] = useState();
     const [search, setSearch] = useState("yangon");
-
+    console.log(weather);
+    //get_current_location
     useEffect(() => {
         const getCurrentLocation = async () => {
             try {
                 const api = `/api/location?search=${search}`;
                 const fetchData = await fetch(api);
                 const resData = await fetchData.json();
-                const weather = resData.map(items => {
-                    setLat(items?.lat);
-                    setLong(items?.lon);
-                });
-                return weather;
+                setWeather(resData);
             } catch (err) {
                 console.error(err.message);
             }
@@ -29,7 +25,7 @@ const Weather = () => {
     }, [search]);
 
     return (
-        <WeatherAPI.Provider value={{ lat, lon, search, setSearch }}>
+        <WeatherAPI.Provider value={{weather, search, setSearch }}>
             <Nav />
         </WeatherAPI.Provider>
     );
