@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
 import CurrentWeather from "./CurrentWeather";
 import { WeatherAPI } from "../context/Weather";
-
+import WeatherHighLight from "./WeatherHighLight";
 const Nav = () => {
    const {search, setSearch} = useContext(WeatherAPI);
    const inputData  = useRef(null);
