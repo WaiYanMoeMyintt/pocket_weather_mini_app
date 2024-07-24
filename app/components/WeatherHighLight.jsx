@@ -9,9 +9,11 @@ import Temperature from "./Temperature";
 const WeatherHighLight = () => {
   return (
     <div className="current_weather_content h-full mx-2.5 rounded-xl p-4 mt-4">
-      <h3 className="mb-4">Today Weather Condition</h3>
-      <Pollution />
-      <SunCondition />
+      <h3 className="mb-4 flex">Today Weather Condition</h3>
+      <div className="flex justify-between items-end gap-1 flex-wrap">
+        <Pollution  />
+        <SunCondition />
+      </div>
       <div className="weather_highlights py-1 px-1 w-full">
         <Wind />
         <UV />

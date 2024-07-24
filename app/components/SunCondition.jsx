@@ -10,10 +10,9 @@ const SunCondition = () => {
   if (!forecast || !currentSun[0] || !currentSun) {
     return <div>Loading.....</div>;
   }
-  console.log(forecast);
 
   return (
-    <div className="pollution  py-4 px-2 rounded-xl mt-2.5">
+    <div className="pollution  py-4 px-2 rounded-xl mt-2.5 w-full">
       <div className="status mb-4 ">
         <h3>Sunrise & Sunset</h3>
       </div>

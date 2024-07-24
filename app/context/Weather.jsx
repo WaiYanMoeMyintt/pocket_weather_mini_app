@@ -9,7 +9,7 @@ const Weather = () => {
     const [weather, setWeather] = useState();
     const [search, setSearch] = useState("yangon");
     const [sun, setSun] = useState([]);
-    
+
     //get_current_location
     useEffect(() => {
         const getCurrentLocation = async () => {
@@ -46,7 +46,6 @@ const Weather = () => {
         getCurrentLocation();
     }, [search]);
 
-    console.log(sun);
     return (
         <WeatherAPI.Provider value={{ weather, search, setSearch, sun }}>
             <Nav />

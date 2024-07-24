@@ -9,7 +9,7 @@ const Pollution = () => {
      return <div>Loading.....</div>
   }
   return (
-<div className="pollution  py-4 px-2 rounded-xl">
+<div className="pollution  py-4 px-2 rounded-xl w-full">
       <div className="status flex justify-between items-center">
         <h3>Air Quality</h3>
         <button className="bg-green-600 text-white text-sm py-1 px-4 rounded-xl">
