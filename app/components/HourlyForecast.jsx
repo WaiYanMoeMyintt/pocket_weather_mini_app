@@ -37,7 +37,7 @@ const HourlyForecast = () => {
                 className=" w-full hourly"
               >
                 {days?.hour?.map((icons, index) => (
-                  <div className="pollution text-center flex items-center flex-col py-1 px-2 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer ">
+                  <div key = {index} className="pollution text-center flex items-center flex-col py-1 px-2 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer ">
                     <h3 className="time_title text-sm text-slate-600 mb-2.5">
                       {icons?.time?.slice(11, 13)}
                       {/* {time > icons?.time?.slice(12, 13) ? "AM" : "PM" } */}
