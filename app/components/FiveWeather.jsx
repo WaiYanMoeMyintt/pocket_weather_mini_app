@@ -20,11 +20,11 @@ const FiveWeather = () => {
 
   return (
     <div className="current_weather_content h-full mx-2.5 rounded-xl p-4 mt-4">
-      <h3 className="mb-4 flex"> 5 day's weather forecast</h3>
+      <h3 className="mb-4 flex"> 5 days weather forecast</h3>
       <div className="py-1 px-1 w-full flex justify-between items-center">
         {forecastday &&
           forecastday.map((days, index) => (
-            <div className="pollution py-2 px-4 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div key={index} className="pollution py-2 px-4 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer">
               <h3 className="time_title text-center text-base" key={index}>
                 {days.date.slice(8, 10)}
               </h3>
