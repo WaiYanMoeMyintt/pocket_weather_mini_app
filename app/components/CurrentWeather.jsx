@@ -7,6 +7,7 @@ import WeatherHighLight from "./WeatherHighLight";
 import FiveWeather from "./FiveWeather";
 import Loader from "./Loader";
 import HourlyForecast from "./HourlyForecast";
+import Link from "next/link";
 import {
   MapPin,
   Cloud,
@@ -75,6 +76,7 @@ const CurrentWeather = () => {
       <FiveWeather />
       <WeatherHighLight />
       <HourlyForecast />
+      <Link target="_blank" href="https://github.com/WaiYanMoeMyintt?tab=repositories" className="w-full text-center text-sm  flex items-center justify-center py-4 text-slate-600 hover:text-blue-700">Made by WaiYan MoeMyint</Link>
     </>
   );
 };

@@ -3,17 +3,12 @@ import React, { useContext, useState, useEffect } from "react";
 import { WeatherAPI } from "../context/Weather";
 import Image from "next/image";
 import Loader from "./Loader";
-import { Pagination } from "swiper/modules";
-import { Swiper, div } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+
+
 const HourlyForecast = () => {
   const { sun } = useContext(WeatherAPI);
   const { forecastday } = sun;
-
-  console.log(forecastday);
  
-  const time = 12;
 
   if (!sun || !forecastday) {
     return (
@@ -22,6 +17,7 @@ const HourlyForecast = () => {
       </div>
     );
   }
+  const time  = 12;
 
   return (
     <div className="current_weather_content h-full mx-2.5 rounded-xl p-4 mt-4">
@@ -39,7 +35,10 @@ const HourlyForecast = () => {
                 {days?.hour?.map((icons, index) => (
                   <div key = {index} className="pollution text-center flex items-center flex-col py-1 px-2 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer ">
                     <h3 className="time_title text-sm text-slate-600 mb-2.5">
-                      {icons?.time?.slice(11, 13)}
+                      {icons?.time?.slice(10, 13)} {time <= index ? "PM" : "AM"}
+                      {
+                        console.log(icons?.time?.slice(11, 13))
+                      }
                       {/* {time > icons?.time?.slice(12, 13) ? "AM" : "PM" } */}
                     </h3>
                     <Image
@@ -54,7 +53,6 @@ const HourlyForecast = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-center w-full text-slate-600 text-sm mt-5">Made in Myanmar</p>
             </div>
           ))}
       </div>
