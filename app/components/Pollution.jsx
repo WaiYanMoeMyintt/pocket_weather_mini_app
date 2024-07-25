@@ -6,7 +6,7 @@ const Pollution = () => {
     const {current, location} = weather;
 
   if(!current.air_quality){
-     return <div>Loading.....</div>
+     return null;
   }
   return (
 <div className="pollution  py-4 px-2 rounded-xl w-full">

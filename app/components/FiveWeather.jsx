@@ -1,17 +1,11 @@
 "use client";
 import React, { useContext, useState, useEffect } from "react";
 import { WeatherAPI } from "../context/Weather";
-const timestamp = require("unix-timestamp");
 import Image from "next/image";
 import Loader from "./Loader";
 const FiveWeather = () => {
   const { sun } = useContext(WeatherAPI);
   const { forecastday } = sun;
-  console.log(forecastday);
-
-  // console.log(currentDate);
-  // const date = timestamp.toDate(1721865600);
-  // console.log(date);
 
   const date = new Date();
   console.log(date);
