@@ -6,6 +6,7 @@ import Image from "next/image";
 import WeatherHighLight from "./WeatherHighLight";
 import FiveWeather from "./FiveWeather";
 import Loader from "./Loader";
+import HourlyForecast from "./HourlyForecast";
 import {
   MapPin,
   Cloud,
@@ -73,6 +74,7 @@ const CurrentWeather = () => {
       </div>
       <FiveWeather />
       <WeatherHighLight />
+      <HourlyForecast />
     </>
   );
 };

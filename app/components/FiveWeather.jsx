@@ -7,8 +7,8 @@ const FiveWeather = () => {
   const { sun } = useContext(WeatherAPI);
   const { forecastday } = sun;
 
-  const date = new Date();
-  console.log(date);
+  // const date = new Date();
+  // console.log(date);
 
   if (!sun || !forecastday) {
     return (
@@ -21,7 +21,7 @@ const FiveWeather = () => {
   return (
     <div className="current_weather_content h-full mx-2.5 rounded-xl p-4 mt-4">
       <h3 className="mb-4 flex"> 5 days weather forecast</h3>
-      <div className="py-1 px-1 w-full flex justify-between items-center">
+      <div className="py-1 px-1 w-full flex justify-between items-center gap-1">
         {forecastday &&
           forecastday.map((days, index) => (
             <div key={index} className="pollution py-2 px-4 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer">
