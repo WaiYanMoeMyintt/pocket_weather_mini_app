@@ -38,7 +38,7 @@ const Weather = () => {
                     throw new Error(`Error fetching data: ${fetchData.statusText}`);
                 }
                 const resData = await fetchData.json();
-                setSun(resData);
+                setSun(resData?.forecast);
             } catch (err) {
                 console.error(err.message);
             }
