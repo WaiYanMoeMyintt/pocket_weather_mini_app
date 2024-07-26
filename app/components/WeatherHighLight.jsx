@@ -6,6 +6,7 @@ import Humidity from "./Humidity";
 import Preci from "./Preci";
 import UV from "./UV";
 import Temperature from "./Temperature";
+import Pressures from "./Pressures";
 const WeatherHighLight = () => {
   return (
     <div className="current_weather_content h-full mx-2.5 rounded-xl p-4 mt-4">
@@ -20,6 +21,7 @@ const WeatherHighLight = () => {
         <Humidity />
         <Preci />
         <Temperature />
+        <Pressures />
       </div>
     </div>
   );

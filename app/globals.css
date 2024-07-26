@@ -52,16 +52,19 @@ body {
 
 @media only screen and (max-width:1400px) {
   .weather_highlights{
+    margin-top: 1rem;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill,200px);
+    grid-template-columns: repeat(auto-fill,360px);
     justify-content: space-between;
-    align-items: center;
+    /* justify-content: space-between;
+    align-items: center; */
     font-family: "Nunito Sans", sans-serif;
   }
 }
 @media only screen and (max-width:650px) {
   .weather_highlights{
+    margin-top: 1rem;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, 100%);
