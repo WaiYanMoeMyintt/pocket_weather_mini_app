@@ -33,51 +33,66 @@ const CurrentWeather = () => {
   const checkTime = current?.last_updated.slice(11, 13);
 
   return (
-    <>
-      <div className="current_weather_content shadow-sm mx-2.5 rounded-xl p-4">
-        <div className="flex justify-between items-center">
-          <h3 className="mb-2.5 text-sm">Now</h3>
-          <h3 className="mb-2.5 text-sm">
-            {checkTime >= 12 ? (
-              <p>{current?.last_updated.slice(11, 16)} PM</p>
-            ) : (
-              <p>{current?.last_updated.slice(11, 16)} AM</p>
-            )}
-          </h3>
-        </div>
-        <div className="weather_title flex gap-4 items-center justify-center">
-          <h3 className="text-5xl">{Math.round(current?.temp_c)}°</h3>
-          <Image
-            src={`https:${current?.condition?.icon}`}
-            width={80}
-            height={80}
-            alt="weather"
-          />
-        </div>
-        <div className="weather_condition flex justify-center items-center mt-4">
-          <p className="mt-2.5">{current?.condition?.text}</p>
-        </div>
-        <div className="border-b mt-2"></div>
-        <div className="weather_location mt-4">
-          <div className="time_zone flex my-2.5 gap-2 items-center">
-            <Image src="/calendar.svg" alt="calendar" width={20} height={20} />
-            <p className="text-sm text-slate-600">
-              {current?.last_updated.slice(0, 11)}
-            </p>
+    <div className="sm:mx-0 md:mx-40">
+      <main className="">
+        <div className="current_weather_content shadow-sm mx-2.5 rounded-xl p-4">
+          <div className="flex justify-between items-center">
+            <h3 className="mb-2.5 text-sm">Now</h3>
+            <h3 className="mb-2.5 text-sm">
+              {checkTime >= 12 ? (
+                <p>{current?.last_updated.slice(11, 16)} PM</p>
+              ) : (
+                <p>{current?.last_updated.slice(11, 16)} AM</p>
+              )}
+            </h3>
           </div>
-          <div className="current_map flex gap-2 items-center my-2.5">
-            <Image src="/map.svg" alt="calendar" width={20} height={20} />
-            <p className="text-sm text-slate-600">
-              {location?.name}, {location?.country}
-            </p>
+          <div className="weather_title flex gap-4 items-center justify-center">
+            <h3 className="text-5xl">{Math.round(current?.temp_c)}°</h3>
+            <Image
+              src={`https:${current?.condition?.icon}`}
+              width={80}
+              height={80}
+              alt="weather"
+            />
+          </div>
+          <div className="weather_condition flex justify-center items-center mt-4">
+            <p className="mt-2.5">{current?.condition?.text}</p>
+          </div>
+          <div className="border-b mt-2"></div>
+          <div className="weather_location mt-4">
+            <div className="time_zone flex my-2.5 gap-2 items-center">
+              <Image
+                src="/calendar.svg"
+                alt="calendar"
+                width={20}
+                height={20}
+              />
+              <p className="text-sm text-slate-600">
+                {current?.last_updated.slice(0, 11)}
+              </p>
+            </div>
+            <div className="current_map flex gap-2 items-center my-2.5">
+              <Image src="/map.svg" alt="calendar" width={20} height={20} />
+              <p className="text-sm text-slate-600">
+                {location?.name}, {location?.country}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <FiveWeather />
+        <FiveWeather />
+      </main>
+      <div className="weather_section">
       <WeatherHighLight />
       <HourlyForecast />
-      <Link target="_blank" href="https://github.com/WaiYanMoeMyintt?tab=repositories" className="w-full text-center text-sm  flex items-center justify-center py-4 text-slate-600 hover:text-blue-700">Made by WaiYan MoeMyint</Link>
-    </>
+      </div>
+      {/* <Link
+        target="_blank"
+        href="https://github.com/WaiYanMoeMyintt?tab=repositories"
+        className="w-full text-center text-sm  flex items-center justify-center py-4 text-slate-600 hover:text-blue-700"
+      >
+        Made by WaiYan MoeMyint
+      </Link> */}
+    </div>
   );
 };
 

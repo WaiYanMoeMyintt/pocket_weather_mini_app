@@ -39,7 +39,6 @@ const HourlyForecast = () => {
                       {
                         console.log(icons?.time?.slice(11, 13))
                       }
-                      {/* {time > icons?.time?.slice(12, 13) ? "AM" : "PM" } */}
                     </h3>
                     <Image
                       src={`https:${icons?.condition?.icon}`}

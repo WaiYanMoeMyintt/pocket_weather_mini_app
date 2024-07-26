@@ -13,7 +13,7 @@ const Nav = () => {
   }
   return (
     <>
-      <nav className="flex items-center justify-between px-2 gap-4">
+      <nav className="flex items-center justify-between px-2 gap-4 sm:mx-0 md:mx-40">
         <div className="cursor-pointer ">
           <Image
             src="/assets/weather_logo.png"

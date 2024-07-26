@@ -8,7 +8,7 @@ const SunCondition = () => {
   const currentSun = forecast?.forecastday;
 
   if (!forecast || !currentSun[0] || !currentSun) {
-    return <div>Loading.....</div>;
+    return null;
   }
 
   return (

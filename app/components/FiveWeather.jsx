@@ -11,11 +11,7 @@ const FiveWeather = () => {
   // console.log(date);
 
   if (!sun || !forecastday) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return null
   }
 
   return (
@@ -24,7 +20,7 @@ const FiveWeather = () => {
       <div className="py-1 px-1 w-full flex justify-between items-center gap-1">
         {forecastday &&
           forecastday.map((days, index) => (
-            <div key={index} className="pollution py-2 px-4 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div key={index} className="pollution md:w-48 flex flex-col items-center py-2 px-4 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer">
               <h3 className="time_title text-center text-base" key={index}>
                 {days.date.slice(8, 10)}
               </h3>

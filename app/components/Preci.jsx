@@ -7,7 +7,7 @@ const Preci = () => {
     const {current, location} = weather;
   
     if(!current){
-      return <div>Loading...</div>
+      return null
     }
   return (
     <div className="pollution  py-4 px-2 rounded-xl mt-2.5">
