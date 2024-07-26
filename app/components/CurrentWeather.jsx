@@ -33,7 +33,7 @@ const CurrentWeather = () => {
   const checkTime = current?.last_updated.slice(11, 13);
 
   return (
-    <div className="sm:mx-0 md:mx-40">
+    <div className="mt-4 sm:mx-0 md:mx-40">
       <main className="">
         <div className="current_weather_content shadow-sm mx-2.5 rounded-xl p-4">
           <div className="flex justify-between items-center">
@@ -85,13 +85,13 @@ const CurrentWeather = () => {
       <WeatherHighLight />
       <HourlyForecast />
       </div>
-      {/* <Link
+      <Link
         target="_blank"
         href="https://github.com/WaiYanMoeMyintt?tab=repositories"
         className="w-full text-center text-sm  flex items-center justify-center py-4 text-slate-600 hover:text-blue-700"
       >
         Made by WaiYan MoeMyint
-      </Link> */}
+      </Link>
     </div>
   );
 };

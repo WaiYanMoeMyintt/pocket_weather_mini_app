@@ -42,6 +42,7 @@ const HourlyForecast = () => {
                       width={40}
                       height={40}
                       alt="icon"
+    
                     />
                     <p className=" text-sm mt-2">
                       {Math.round(icons?.temp_c)}°

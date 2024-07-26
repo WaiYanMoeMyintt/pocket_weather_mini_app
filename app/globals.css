@@ -55,10 +55,8 @@ body {
     margin-top: 1rem;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill,360px);
+    grid-template-columns: repeat(auto-fill,378px);
     justify-content: space-between;
-    /* justify-content: space-between;
-    align-items: center; */
     font-family: "Nunito Sans", sans-serif;
   }
 }

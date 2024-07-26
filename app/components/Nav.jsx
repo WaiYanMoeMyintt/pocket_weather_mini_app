@@ -17,9 +17,9 @@ const Nav = () => {
         <div className="cursor-pointer ">
           <Image
             src="/assets/weather_logo.png"
-            width={1000}
-            height={1000}
-            className="block w-28 h-28"
+            width={100}
+            height={100}
+            className="block sm:w-40 sm:h-40"
             alt="logo"
           />
         </div>
