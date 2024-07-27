@@ -13,7 +13,7 @@ const Nav = () => {
   }
   return (
     <>
-      <nav className="mt-2 px-2 flex items-center justify-between gap-4  sm:mx-0 md:mx-40">
+      <nav className="mt-4 px-2 py-2.5 flex items-center justify-between gap-4  sm:mx-0 md:mx-40">
         <div className="cursor-pointer nav_logo ">
           <Image
             src="/logo.png"
