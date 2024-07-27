@@ -3,12 +3,16 @@
 import React, { useState, useEffect, useContext, createContext } from "react";
 import CurrentWeather from "../components/CurrentWeather";
 import Nav from "../components/Nav";
+import toast, { Toaster } from 'react-hot-toast';
 export const WeatherAPI = createContext();
 
 const Weather = () => {
     const [weather, setWeather] = useState();
     const [search, setSearch] = useState("yangon");
     const [sun, setSun] = useState([]);
+
+    //noti 
+    const notify = ()=> toast(`${search} is Ready.`);
 
     //get_current_location
     useEffect(() => {
@@ -21,6 +25,7 @@ const Weather = () => {
                 }
                 const resData = await fetchData.json();
                 setWeather(resData);
+                <Toaster />
             } catch (err) {
                 console.error(err.message);
             }
