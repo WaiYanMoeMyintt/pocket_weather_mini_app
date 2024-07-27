@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import CurrentWeather from "../components/CurrentWeather";
 import Nav from "../components/Nav";
 import toast, { Toaster } from 'react-hot-toast';
+
 export const WeatherAPI = createContext();
 
 const Weather = () => {
@@ -11,10 +12,10 @@ const Weather = () => {
     const [search, setSearch] = useState("yangon");
     const [sun, setSun] = useState([]);
 
-    //noti 
-    const notify = ()=> toast(`${search} is Ready.`);
+    // Notify function
+    const notify = () => toast.success(`${search} is Ready.`);
 
-    //get_current_location
+    // Get current location
     useEffect(() => {
         const getCurrentLocation = async () => {
             try {
@@ -25,7 +26,7 @@ const Weather = () => {
                 }
                 const resData = await fetchData.json();
                 setWeather(resData);
-                <Toaster />
+                notify();
             } catch (err) {
                 console.error(err.message);
             }
@@ -33,9 +34,9 @@ const Weather = () => {
         getCurrentLocation();
     }, [search]);
 
-    // get_current_sun_condition
+    // Get current sun condition
     useEffect(() => {
-        const getCurrentLocation = async () => {
+        const getCurrentSunCondition = async () => {
             try {
                 const api = `/api/sun?search=${search}`;
                 const fetchData = await fetch(api);
@@ -48,12 +49,13 @@ const Weather = () => {
                 console.error(err.message);
             }
         };
-        getCurrentLocation();
+        getCurrentSunCondition();
     }, [search]);
 
     return (
-        <WeatherAPI.Provider  value={{ weather, search, setSearch, sun }}>
+        <WeatherAPI.Provider value={{ weather, search, setSearch, sun }}>
             <Nav />
+            <Toaster reverseOrder={false} position="top-center"/> 
         </WeatherAPI.Provider>
     );
 };
