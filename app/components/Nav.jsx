@@ -17,8 +17,8 @@ const Nav = () => {
         <div className="cursor-pointer nav_logo ">
           <Image
             src="/logo.png"
-            width={150}
-            height={150}
+            width={180}
+            height={180}
             className="block"
             alt="logo"
           />

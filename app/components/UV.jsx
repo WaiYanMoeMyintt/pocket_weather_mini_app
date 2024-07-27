@@ -15,7 +15,7 @@ const UV = () => {
     </div>
     <div className  = "flex justify-between items-center gap-4">
        <Zap size = {35}/>
-       <p className = "text-slate-600 text-base">{current?.uv} uv</p>
+       <p className = "text-slate-300 text-base sm:text-sm">{current?.uv} uv</p>
     </div>
 </div>
   )

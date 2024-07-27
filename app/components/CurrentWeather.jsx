@@ -8,15 +8,7 @@ import FiveWeather from "./FiveWeather";
 import Loader from "./Loader";
 import HourlyForecast from "./HourlyForecast";
 import Link from "next/link";
-import {
-  MapPin,
-  Cloud,
-  CloudSun,
-  Cloudy,
-  CloudDrizzle,
-  CloudRain,
-  Snowflake,
-} from "lucide-react";
+import { CalendarFold, Map  } from 'lucide-react';
 const CurrentWeather = () => {
   const { weather } = useContext(WeatherAPI);
 
@@ -61,19 +53,14 @@ const CurrentWeather = () => {
           <div className="border-b mt-2"></div>
           <div className="weather_location mt-4">
             <div className="time_zone flex my-2.5 gap-2 items-center">
-              <Image
-                src="/calendar.svg"
-                alt="calendar"
-                width={20}
-                height={20}
-              />
-              <p className="text-sm text-slate-600">
+              <CalendarFold size = {18} />
+              <p className="text-sm text-slate-300">
                 {current?.last_updated.slice(0, 11)}
               </p>
             </div>
             <div className="current_map flex gap-2 items-center my-2.5">
-              <Image src="/map.svg" alt="calendar" width={20} height={20} />
-              <p className="text-sm text-slate-600">
+               <Map  size = {18} />
+              <p className="text-sm text-slate-300">
                 {location?.name}, {location?.country}
               </p>
             </div>

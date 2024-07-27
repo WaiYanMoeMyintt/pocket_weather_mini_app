@@ -17,7 +17,7 @@ const Pressures = () => {
       </div>
       <div className="flex justify-between items-center gap-4">
         <Gauge size={35} />
-        <p className="text-slate-600 text-base">{current?.pressure_mb} Pa</p>
+        <p className="text-slate-300 text-base sm:text-sm">{current?.pressure_mb} Pa</p>
       </div>
     </div>
   );

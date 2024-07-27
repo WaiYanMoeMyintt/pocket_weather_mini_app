@@ -22,19 +22,19 @@ const Pollution = () => {
         <div className="flex gap-8 text-center">
           <div className="flex flex-col">
             <h3>PM25</h3>
-            <span className="text-sm text-slate-600">{current?.air_quality?.pm2_5}</span>
+            <span className="text-sm text-slate-300">{current?.air_quality?.pm2_5}</span>
           </div>
           <div className="flex flex-col">
             <h3 >PM10</h3>
-            <span className="text-sm text-slate-600">{current?.air_quality?.pm10}</span>
+            <span className="text-sm text-slate-300">{current?.air_quality?.pm10}</span>
           </div>
           <div className="flex flex-col">
             <h3 >NO2</h3>
-            <span className="text-sm text-slate-600">{current?.air_quality?.no2}</span>
+            <span className="text-sm text-slate-300">{current?.air_quality?.no2}</span>
           </div>
           <div className="flex flex-col">
             <h3 >SO2</h3>
-            <span className="text-sm text-slate-600">{current?.air_quality?.so2}</span>
+            <span className="text-sm text-slate-300">{current?.air_quality?.so2}</span>
           </div>
         </div>
       </div>

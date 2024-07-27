@@ -15,7 +15,7 @@ const Wind = () => {
       </div>
       <div className="flex justify-between items-center gap-4">
         <Feather size={35} />
-        <p className="text-slate-600 text-base">{current?.wind_mph} mpH</p>
+        <p className="text-slate-300 text-base sm:text-sm">{current?.wind_mph} mpH</p>
       </div>
     </div>
   );

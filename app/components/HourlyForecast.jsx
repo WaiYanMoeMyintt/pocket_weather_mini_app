@@ -34,7 +34,7 @@ const HourlyForecast = () => {
               >
                 {days?.hour?.map((icons, index) => (
                   <div key = {index} className="pollution text-center flex items-center flex-col py-1 px-2 rounded-md shadow-md hover:shadow-lg transition-all cursor-pointer ">
-                    <h3 className="time_title text-sm text-slate-600 mb-2.5">
+                    <h3 className="time_title text-sm text-slate-100 mb-2.5">
                       {icons?.time?.slice(10, 13)} {time <= index ? "PM" : "AM"}
                     </h3>
                     <Image
@@ -44,7 +44,7 @@ const HourlyForecast = () => {
                       alt="icon"
     
                     />
-                    <p className=" text-sm mt-2">
+                    <p className=" text-sm mt-2 text-slate-400">
                       {Math.round(icons?.temp_c)}°
                     </p>
                   </div>

@@ -33,7 +33,7 @@ const SunCondition = () => {
           <div >
             <h4>Sunset</h4>
             {currentSun[0] && (
-              <p className="text-slate-600 text-sm">
+              <p className="text-slate-300 text-base sm:text-sm">
                 {currentSun[0]?.astro.sunset}
               </p>
             )}

@@ -16,7 +16,7 @@ const Preci = () => {
     </div>
     <div className  = "flex justify-between items-center gap-4">
        <Cloud size = {35}/>
-       <p className = "text-slate-600 text-base">{current?.precip_mm} mm</p>
+       <p className = "text-slate-300 text-base sm:text-sm">{current?.precip_mm} mm</p>
     </div>
 </div>
   )

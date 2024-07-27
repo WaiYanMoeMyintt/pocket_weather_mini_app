@@ -15,7 +15,7 @@ const Temperature = () => {
       </div>
       <div className="flex justify-between items-center gap-4">
         <ThermometerSun size={35} />
-        <p className="text-slate-600 text-base">{Math.round(current?.temp_c)}°C</p>
+        <p className="text-slate-300 text-base sm:text-sm">{Math.round(current?.temp_c)}°C</p>
       </div>
     </div>
   );
