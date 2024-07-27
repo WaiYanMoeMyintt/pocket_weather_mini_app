@@ -42,8 +42,8 @@ const Nav = () => {
             alt="logo"
           />
         </form>
-        <div className="location p-2 rounded-2xl cursor-pointer">
-          <Image src="/assets/position.svg" width={25} height={25} alt="logo" />
+        <div className="location p-2  rounded-2xl cursor-pointer">
+          <Image src="/assets/position.svg" width={35} height={35} alt="logo" />
         </div>
       </nav>
       <CurrentWeather />
