@@ -47,7 +47,7 @@ const Weather = () => {
     }, [search]);
 
     return (
-        <WeatherAPI.Provider value={{ weather, search, setSearch, sun }}>
+        <WeatherAPI.Provider  value={{ weather, search, setSearch, sun }}>
             <Nav />
         </WeatherAPI.Provider>
     );

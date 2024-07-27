@@ -11,16 +11,18 @@
    --second-font:#d0d0d0;
 }
 body {
-  background-color:#e4f1ff;
+  /* background-color:#e4f1ff; */
+  /* background-color: #030407; */
+  background-color: #0c0c0c;
  
 }
 .location{
-  background-color:#3cca5d;
+  background-color:#0176ff;
 }
 .search input {
   font-size: .9rem;
   background-color: #fff;
-  height: 2.5rem;
+  height: 2.2rem;
   padding-left: 1rem;
 }
 .search input:active, .search input:focus {
@@ -35,19 +37,40 @@ body {
   font-family: "Quicksand", sans-serif;
   color:#807f7f;
 }
+
+
+@media only screen and (max-width:360px){
+  nav {
+    padding: 1rem 0;
+  }
+  .search{
+     width: 100%;
+  }
+  .search input {
+    height: 2.2rem;
+    background-color: #141414;
+    color: #fff;
+  }
+}
+
 .weather_title h3 {
   font-family: "Nunito Sans", sans-serif;
 }
 .current_weather_content{
-  background-color: #fff;
- color: black;
+  /* background-color: #fff; */
+  /* background-color: #0e121c; */
+  /* background-color: #13151d; */
+  color: #f2f2f2;
+  background-color:#141414;
 }
 .weather-icon{
   color: var( --second-font);
 }
 .pollution{
 
-  background-color:#e4f1ff;
+  /* background-color:#e4f1ff; */
+  background-color: #1f1f1f;
+  color: #f2f2f2;
 }
 
 @media only screen and (max-width:1400px) {

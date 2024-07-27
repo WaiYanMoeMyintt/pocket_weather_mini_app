@@ -13,25 +13,25 @@ const Nav = () => {
   }
   return (
     <>
-      <nav className="flex items-center justify-between px-2 gap-4 sm:mx-0 md:mx-40">
-        <div className="cursor-pointer ">
+      <nav className="mt-2 px-2 flex items-center justify-between gap-4  sm:mx-0 md:mx-40">
+        <div className="cursor-pointer nav_logo ">
           <Image
-            src="/assets/weather_logo.png"
-            width={100}
-            height={100}
-            className="block sm:w-40 sm:h-40"
+            src="/logo.png"
+            width={150}
+            height={150}
+            className="block"
             alt="logo"
           />
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="search flex md:w-full"
+          className="search flex w-full "
         >
           <input
             type="text"
-            className="block w-72 rounded-2xl border-none md:w-full"
-            placeholder="Search location or places"
+            className="block rounded-2xl border-none w-full"
+            placeholder="Search location..."
             ref={inputData}
           />
           <Image

@@ -12,7 +12,7 @@ const Pollution = () => {
 <div className="pollution  py-4 px-2 rounded-xl w-full">
       <div className="status flex justify-between items-center">
         <h3>Air Quality</h3>
-        <button className="bg-green-600 text-white text-sm py-1 px-4 rounded-xl">
+        <button className="bg-blue-600 text-white text-sm py-1 px-4 rounded-xl">
           Good
         </button>
       </div>
