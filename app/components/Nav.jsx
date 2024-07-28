@@ -1,15 +1,10 @@
+
 import React, { useState, useEffect, useContext, useRef } from "react";
 import Image from "next/image";
 import CurrentWeather from "./CurrentWeather";
 import { WeatherAPI } from "../context/Weather";
 import WeatherHighLight from "./WeatherHighLight";
-import Link from 'next/link';
-import {
-  getSignInUrl,
-  getSignUpUrl,
-  getUser,
-  signOut,
-} from '@workos-inc/authkit-nextjs';
+
 const Nav = () => {
    const {search, setSearch} = useContext(WeatherAPI);
    const inputData  = useRef(null);
