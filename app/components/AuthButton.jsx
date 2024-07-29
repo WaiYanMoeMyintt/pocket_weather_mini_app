@@ -55,7 +55,7 @@ const AuthButton = () => {
               <p className="text-slate-300">{user?.fullName}</p>
             </Dropdown.Item>
             <Dropdown.Item className="drop_item">
-              <SignOutButton className="block px-4 py-1 rounded-md shadow-md bg-slate-200 w-full text-sm" />
+              <SignOutButton className="block px-4 py-1 rounded-md shadow-md bg-slate-200 w-full text-sm hover:bg-red-500" />
             </Dropdown.Item>
           </>
         )}
