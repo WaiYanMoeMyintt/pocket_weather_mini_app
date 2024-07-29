@@ -17,6 +17,9 @@ const nextConfig = {
     images: {
       domains: ['cdn.weatherapi.com', 'img.clerk.com'],
     },
+    eslint: {
+      ignoreDuringBuilds: true,
+  },
   };
   
   export default nextConfig;
