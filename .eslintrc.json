@@ -1,7 +1,21 @@
 {
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@next/next"
+  ],
   "rules": {
-    "import/no-anonymous-default-export": "off",
-    "react/display-name": "off",
-    "react-hooks/exhaustive-deps": "off"
+    // Add custom rules here
   }
 }
