@@ -49,6 +49,6 @@ const Nav = () => {
   );
 };
 
-Nav.displayName = "Nav"; // Add display name
+Nav.displayName = "Nav";
 
 export default Nav;

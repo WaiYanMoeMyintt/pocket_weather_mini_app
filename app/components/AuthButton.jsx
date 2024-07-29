@@ -13,7 +13,7 @@ const AuthButton = () => {
   }, []);
 
   if (!isMounted) {
-    return null; 
+    return null; // or a loading spinner
   }
 
   return (

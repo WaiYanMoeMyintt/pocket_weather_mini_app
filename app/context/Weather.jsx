@@ -60,6 +60,6 @@ const Weather = () => {
   );
 };
 
-Weather.displayName = "Weather"; // Add display name
+Weather.displayName = "Weather"; 
 
 export default Weather;
