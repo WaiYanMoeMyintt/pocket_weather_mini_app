@@ -1,7 +1,12 @@
-import { authkitMiddleware } from '@workos-inc/authkit-nextjs';
+import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default authkitMiddleware();
+export default clerkMiddleware();
 
-// Match against pages that require authentication
-// Leave this out if you want authentication on every page in your application
-export const config = { matcher: ['/'] };
+export const config = {
+  matcher: [
+    // Skip Next.js internals and all static files, unless found in search params
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)',
+  ],
+};

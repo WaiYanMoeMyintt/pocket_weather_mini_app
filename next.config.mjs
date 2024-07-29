@@ -15,7 +15,7 @@ const nextConfig = {
       ];
     },
     images: {
-      domains: ['cdn.weatherapi.com'],
+      domains: ['cdn.weatherapi.com', 'img.clerk.com'],
     },
   };
   
