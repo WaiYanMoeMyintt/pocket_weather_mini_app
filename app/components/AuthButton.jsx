@@ -46,15 +46,15 @@ const AuthButton = () => {
         }
       >
         {!user ? (
-          <Dropdown.Item className="no-hover-bg">
+          <Dropdown.Item className="drop_item">
             <SignInButton className="block px-4 py-2" />
           </Dropdown.Item>
         ) : (
           <>
-            <Dropdown.Item className="no-hover-bg">
+            <Dropdown.Item className="drop_item">
               <p className="text-slate-300">{user?.fullName}</p>
             </Dropdown.Item>
-            <Dropdown.Item className="no-hover-bg">
+            <Dropdown.Item className="drop_item">
               <SignOutButton className="block px-4 py-1 rounded-md shadow-md bg-slate-200 w-full text-sm" />
             </Dropdown.Item>
           </>

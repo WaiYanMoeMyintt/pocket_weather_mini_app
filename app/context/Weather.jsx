@@ -1,5 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-
 import React, { useState, useEffect, createContext } from "react";
 import CurrentWeather from "../components/CurrentWeather";
 import Nav from "../components/Nav";
