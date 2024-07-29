@@ -1,7 +1,7 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
-export default clerkMiddleware();
+export default (req, res) => {
+  res.status(200).json({ message: 'Middleware is working!' });
+};
+
 export const config = {
-  matcher: [
-    '/',
-  ],
+  matcher: '/(.*)',
 };
