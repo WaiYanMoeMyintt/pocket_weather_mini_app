@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export, react/display-name */
 "use client";
 import React, { useState, useContext, useRef } from "react";
 import Image from "next/image";
