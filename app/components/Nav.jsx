@@ -1,19 +1,22 @@
 "use client";
-import React, { useState, useEffect, useContext, useRef } from "react";
+import React, { useState, useContext, useRef } from "react";
 import Image from "next/image";
 import CurrentWeather from "./CurrentWeather";
 import { WeatherAPI } from "../context/Weather";
 import AuthButton from "./AuthButton";
+
 const Nav = () => {
   const { search, setSearch } = useContext(WeatherAPI);
   const inputData = useRef(null);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSearch(inputData.current.value);
   };
+
   return (
     <>
-      <nav className="mt-4 px-2 py-2.5 flex items-center justify-between gap-4  sm:mx-0 md:mx-40">
+      <nav className="mt-4 px-2 py-2.5 flex items-center justify-between gap-4 sm:mx-0 md:mx-40">
         <div className="cursor-pointer nav_logo ">
           <Image
             src="/logo.png"
@@ -45,5 +48,7 @@ const Nav = () => {
     </>
   );
 };
+
+Nav.displayName = "Nav"; // Add display name
 
 export default Nav;
