@@ -1,0 +1,66 @@
+[debug] [2024-07-29T07:35:17.162Z] ----------------------------------------------------------------------
+[debug] [2024-07-29T07:35:17.166Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\WaiYan MoeMyint\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-29T07:35:17.167Z] CLI Version:   13.14.2
+[debug] [2024-07-29T07:35:17.167Z] Platform:      win32
+[debug] [2024-07-29T07:35:17.167Z] Node Version:  v20.12.2
+[debug] [2024-07-29T07:35:17.167Z] Time:          Mon Jul 29 2024 14:05:17 GMT+0630 (Myanmar Time)
+[debug] [2024-07-29T07:35:17.168Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-29T07:35:17.266Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-29T07:35:17.266Z] > authorizing via signed-in user (wymoemyint4523@gmail.com)
+[debug] [2024-07-29T07:35:17.267Z] [iam] checking project mini-pocket-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-29T07:35:17.268Z] > refreshing access token with scopes: []
+[debug] [2024-07-29T07:35:17.271Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-29T07:35:17.271Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-29T07:35:17.489Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-07-29T07:35:17.489Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-29T07:35:17.509Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions [none]
+[debug] [2024-07-29T07:35:17.509Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions x-goog-quota-user=projects/mini-pocket-weather-app
+[debug] [2024-07-29T07:35:17.510Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-29T07:35:18.895Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions 200
+[debug] [2024-07-29T07:35:18.896Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-29T07:35:18.897Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app [none]
+[debug] [2024-07-29T07:35:19.266Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app 200
+[debug] [2024-07-29T07:35:19.266Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app {"projectId":"mini-pocket-weather-app","projectNumber":"510246866717","displayName":"mini-pocket-weather-app","name":"projects/mini-pocket-weather-app","resources":{"hostingSite":"mini-pocket-weather-app"},"state":"ACTIVE","etag":"1_45fe38f1-1af9-40b9-85f4-c771af20a38e"}
+[debug] [2024-07-29T07:35:24.662Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites pageToken=&pageSize=10
+[debug] [2024-07-29T07:35:25.433Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites 200
+[debug] [2024-07-29T07:35:25.434Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites {"sites":[{"name":"projects/mini-pocket-weather-app/sites/mini-pocket-weather-app","defaultUrl":"https://mini-pocket-weather-app.web.app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-29T07:35:25.435Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config [none]
+[debug] [2024-07-29T07:35:26.012Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config 200
+[debug] [2024-07-29T07:35:26.013Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config {"projectId":"mini-pocket-weather-app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","storageBucket":"mini-pocket-weather-app.appspot.com","apiKey":"AIzaSyCXm8hOpKR_AvJg8aOMGynG1UIU2uqzt3U","authDomain":"mini-pocket-weather-app.firebaseapp.com","messagingSenderId":"510246866717","measurementId":"G-TVMYDFLSEE"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-29T07:35:38.340Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app [none]
+[debug] [2024-07-29T07:35:38.953Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app 200
+[debug] [2024-07-29T07:35:38.954Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app {"name":"projects/mini-pocket-weather-app/sites/mini-pocket-weather-app","defaultUrl":"https://mini-pocket-weather-app.web.app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","type":"DEFAULT_SITE"}
+[info]  ⚠ Invalid next.config.mjs options detected: 
+
+[info]  ⚠     Unrecognized key(s) in object: 'middleware' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info] uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\WaiYan MoeMyint\Desktop\FE Project\pocket_weather\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\WaiYan MoeMyint\\Desktop\\FE Project\\pocket_weather\\.next\\trace'
+}
+
+[debug] [2024-07-29T07:36:01.323Z] Error: ENOENT: no such file or directory, open 'C:\Users\WaiYan MoeMyint\Desktop\FE Project\pocket_weather\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
