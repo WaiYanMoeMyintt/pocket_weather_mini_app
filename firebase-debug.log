@@ -1,0 +1,135 @@
+[debug] [2024-07-29T05:29:36.948Z] ----------------------------------------------------------------------
+[debug] [2024-07-29T05:29:36.953Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\WaiYan MoeMyint\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-29T05:29:36.954Z] CLI Version:   13.14.2
+[debug] [2024-07-29T05:29:36.954Z] Platform:      win32
+[debug] [2024-07-29T05:29:36.954Z] Node Version:  v20.12.2
+[debug] [2024-07-29T05:29:36.955Z] Time:          Mon Jul 29 2024 11:59:36 GMT+0630 (Myanmar Time)
+[debug] [2024-07-29T05:29:36.955Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-29T05:29:37.060Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-29T05:29:37.061Z] > authorizing via signed-in user (wymoemyint4523@gmail.com)
+[debug] [2024-07-29T05:29:37.061Z] [iam] checking project mini-pocket-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-29T05:29:37.064Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions [none]
+[debug] [2024-07-29T05:29:37.064Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions x-goog-quota-user=projects/mini-pocket-weather-app
+[debug] [2024-07-29T05:29:37.065Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-29T05:29:37.620Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions 200
+[debug] [2024-07-29T05:29:37.620Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mini-pocket-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-29T05:29:37.621Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app [none]
+[debug] [2024-07-29T05:29:38.023Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app 200
+[debug] [2024-07-29T05:29:38.023Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mini-pocket-weather-app {"projectId":"mini-pocket-weather-app","projectNumber":"510246866717","displayName":"mini-pocket-weather-app","name":"projects/mini-pocket-weather-app","resources":{"hostingSite":"mini-pocket-weather-app"},"state":"ACTIVE","etag":"1_45fe38f1-1af9-40b9-85f4-c771af20a38e"}
+[debug] [2024-07-29T05:29:42.833Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites pageToken=&pageSize=10
+[debug] [2024-07-29T05:29:43.784Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites 200
+[debug] [2024-07-29T05:29:43.784Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites {"sites":[{"name":"projects/mini-pocket-weather-app/sites/mini-pocket-weather-app","defaultUrl":"https://mini-pocket-weather-app.web.app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","type":"DEFAULT_SITE"}]}
+[debug] [2024-07-29T05:29:43.785Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config [none]
+[debug] [2024-07-29T05:29:44.707Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config 200
+[debug] [2024-07-29T05:29:44.707Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:510246866717:web:f7ac84babfafe5adea9bf4/config {"projectId":"mini-pocket-weather-app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","storageBucket":"mini-pocket-weather-app.appspot.com","apiKey":"AIzaSyCXm8hOpKR_AvJg8aOMGynG1UIU2uqzt3U","authDomain":"mini-pocket-weather-app.firebaseapp.com","messagingSenderId":"510246866717","measurementId":"G-TVMYDFLSEE"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-07-29T05:29:55.564Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app [none]
+[debug] [2024-07-29T05:29:56.375Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app 200
+[debug] [2024-07-29T05:29:56.376Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mini-pocket-weather-app/sites/mini-pocket-weather-app {"name":"projects/mini-pocket-weather-app/sites/mini-pocket-weather-app","defaultUrl":"https://mini-pocket-weather-app.web.app","appId":"1:510246866717:web:f7ac84babfafe5adea9bf4","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] 
+
+[info]  ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
+
+[info] 
+Failed to compile.
+
+[info] 
+./app/api/auth/callback/route.js
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/api/location/route.js
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/api/sun/route.js
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/AuthButton.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/CurrentWeather.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/FiveWeather.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/HourlyForecast.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Humidity.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Loader.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Nav.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/NavAuth.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Pollution.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Preci.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Pressures.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/SunCondition.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Temperature.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/UV.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/WeatherHighLight.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/WeatherMenu.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/components/Wind.jsx
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/context/Weather.jsx
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/firebase.js
+2:1  Error: Parsing error: The keyword 'import' is reserved
+
+./app/layout.js
+1:3  Error: Parsing error: The keyword 'import' is reserved
+
+./app/page.js
+1:1  Error: Parsing error: The keyword 'import' is reserved
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+[debug] [2024-07-29T05:30:33.095Z] Error: ENOENT: no such file or directory, open 'C:\Users\WaiYan MoeMyint\Desktop\FE Project\pocket_weather\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
